@@ -1,13 +1,128 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Fira sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #374151;
 }
+
+input, button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.wrapper {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#todos .todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#todos .todo .content {
+  flex: 1 1 0%;
+}
+
+#todos .todo .content .text {
+  color: #eee;
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+#todos .todo .content .text:not(:read-only) {
+  color: #ec4899;
+}
+
+#todos .todo .action {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.todo .action button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.todo .actions button:hover {
+  opacity: 0.8;
+}
+
+.todo .action button:active {
+  opacity: 0.6;
+}
+
+.todo .action .edit {
+  background-image: linear-gradient(to right, #ec4899,
+  #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.todo .action .delete {
+  color: crimson;
+}
+
+.todo-header {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.todo-form {
+  display: flex;
+}
+
+.todo-input {
+  flex: 1 1 0%;
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: #eee;
+  font-size: 1.25rem;
+}
+
+.todo-input::placeholder {
+  color: #6b7280;
+}
+
+.todo-submit {
+  color: #ec4899;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0,4s;
+}
+
+.todo-list {
+  padding: 1rem;
+}
+
+.todo-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #6b7280;
+  margin-bottom: 1rem;
+} 
